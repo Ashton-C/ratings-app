@@ -1,0 +1,26 @@
+.RItem {
+    width: 50%;
+    height: 10%;
+    color: black;
+    font-size: 15px;
+    background-color: white;
+    border: 2px solid #333333;
+    border-radius: 25px;
+    margin: 5px 5px 5px 5px;
+    padding: 4px 6px 4px 6px;
+}
+
+#top {
+    display:inline;
+    margin-block-end: 0px;
+}
+
+.Title {
+    float: left;
+}
+.Rating {
+    float: right;
+}
+.Description {
+    display: inline-block;
+}
