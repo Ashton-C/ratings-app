@@ -1,13 +1,16 @@
 .RItem {
-    width: 50%;
-    height: 10%;
-    color: black;
+    width: auto;
+    height: auto;
+    position: relative;
+    color: #2F2F2F;
     font-size: 15px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, .15);
+    box-shadow: 3px 3px 10px gray;
     border: 2px solid #333333;
     border-radius: 25px;
-    margin: 5px 5px 5px 5px;
+    margin: 20px 5px 20px 5px;
     padding: 4px 6px 4px 6px;
+    align-content: center;
 }
 
 #top {
@@ -21,6 +24,19 @@
 .Rating {
     float: right;
 }
+.RatingBar {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    height: 2vh;
+}
+.RatingNugget {
+    display:inline-table;
+    background-color: limegreen;
+    width: 10%;
+    height: 100%;
+}
 .Description {
-    display: inline-block;
+    display: block;
+    margin-top: 10px;
+    margin-bottom:10px;
 }

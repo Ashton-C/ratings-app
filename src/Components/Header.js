@@ -9,7 +9,7 @@ class Header extends Component {
         <p>
           I use this site to rate stuff, good, bad, movies, books, pretty much
           what ever I feel like that day... This site is created with React and
-          it's primary purpose to act a skill building project.
+          it's primary purpose to act as a skill building project.
         </p>
       </div>
     );
