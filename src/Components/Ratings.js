@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 import './Ratings.css';
 import RItem from './RItem';
 
