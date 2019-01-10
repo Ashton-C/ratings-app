@@ -1,0 +1,8 @@
+.Catagories {
+  width: 100%;
+  height: auto;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}

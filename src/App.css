@@ -1,5 +1,6 @@
 .App {
-    background-image: url("./qbkls.png");
-    height: 100%;
-    width: 100%;
+  background-color: #ffecdf;
+  font-family: "Open Sans", sans-serif;
+  height: 100%;
+  width: 100%;
 }
