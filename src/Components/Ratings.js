@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import './Ratings.css';
 import RItem from './RItem';
-import Movies from './Movies';
-import Books from './Books';
-import Things from './Things';
+import Movies from './Routes/Movies';
+import Books from './Routes/Books';
+import Things from './Routes/Things';
 
 class Ratings extends Component {
   render() {

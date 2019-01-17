@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import RItem from './RItem';
+import RItem from '../RItem';
 
 class Books extends Component {
   render() {
