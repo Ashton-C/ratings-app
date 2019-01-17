@@ -1,0 +1,39 @@
+{
+  "schema": {
+    "id": 0,
+    "name": "string",
+    "rating": 0,
+    "description": "string",
+    "catagory": "string"
+  },
+  "data": [
+    {
+      "id": 1,
+      "name": "Spiderman: Into the Spiderverse",
+      "rating": 10,
+      "description": "Best spiderman movie I have seen to date... Amazing animation, fantastic story, great humor...",
+      "catagory": "Movie"
+    },
+    {
+      "id": 2,
+      "name": "Aquaman",
+      "rating": 7,
+      "description": "Was honestly not that great, but it made me laugh alot, so it gets a 7.",
+      "catagory": "Movie"
+    },
+    {
+      "id": 3,
+      "name": "The Adolesence of P1 by Thomas J. Ryan",
+      "rating": 7,
+      "description": "Pretty good book about a fictional rise of the first AI, pretty engaging and fun to read about the old hardware.",
+      "catagory": "Book"
+    },
+    {
+      "id": 4,
+      "name": "Creality Ender 3",
+      "rating": 8,
+      "description": "Amazing budget 3D printer, amazing quality after dialing in the settings, easy and fun to use!",
+      "catagory": "Thing"
+    }
+  ]
+}
