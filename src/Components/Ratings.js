@@ -1,33 +1,47 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import "./Ratings.css";
-import RItem from "./RItem";
-import Movies from "./Routes/Movies";
-import Books from "./Routes/Books";
-import Things from "./Routes/Things";
+import Posts from "./Posts";
 const raw = require("../data/data.json");
+//console.log(raw);
 
 class Ratings extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: this.getJSONData()
+    };
+  }
   getJSONData() {
     let movies = [];
     let books = [];
     let things = [];
-    let data = JSON.parse(raw);
-    for (let item in data.data) {
-      if (item.catagory === "Movie") {
-        movies.push(item);
+    let data = raw["data"];
+    for (let item in data) {
+      if (data[item].catagory === "Movie") {
+        movies.push(data[item]);
       }
-      if (item.catagory === "Book") {
-        books.push(item);
+      if (data[item].catagory === "Book") {
+        books.push(data[item]);
       }
-      if (item.catagory === "Thing") {
-        things.push(item);
+      if (data[item].catagory === "Thing") {
+        things.push(data[item]);
       }
     }
-    return movies && books && things;
+    //console.log(movies);
+    return [movies, books, things];
   }
+  logArrays() {
+    console.log(this.movies);
+  }
+
+  compontDidMount() {
+    this.setState({ data: this.getJSONData() });
+    console.log(this.state.data);
+  }
+
   render() {
-    this.getJSONData();
+    //console.log(this.state.data[1]);
     return (
       <div className="Ratings">
         <Route
@@ -44,23 +58,27 @@ class Ratings extends Component {
           path="/All"
           render={props => (
             <div>
-              <Movies data={this.movies} />
-              <Books data={this.books} />
-              <Things data={this.things} />
+              <Posts {...props} data={this.state.data[0]} />
+              <Posts {...props} data={this.state.data[1]} />
+              <Posts {...props} data={this.state.data[2]} />
             </div>
           )}
         />
         <Route
           exact
           path="/Movies"
-          render={() => <Posts data={this.movies} />}
+          render={props => <Posts {...props} data={this.state.data[0]} />}
         />
         <Route
           exact
           path="/Things"
-          render={() => <Posts data={this.things} />}
+          render={props => <Posts {...props} data={this.state.data[1]} />}
         />
-        <Route exact path="/Books" render={() => <Posts data={this.books} />} />
+        <Route
+          exact
+          path="/Books"
+          render={props => <Posts {...props} data={this.state.data[2]} />}
+        />
       </div>
     );
   }

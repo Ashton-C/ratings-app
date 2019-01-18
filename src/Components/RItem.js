@@ -1,25 +1,29 @@
-import React, { Component } from 'react';
-import './RItem.css';
-
-
+import React, { Component } from "react";
+import "./RItem.css";
 
 class RItem extends Component {
   createBar = () => {
     let bar = [];
-    for(let i=0; i<this.props.rating; i++) {
-      bar.push(<div className='RatingNugget'></div>)
+    for (let i = 0; i < this.props.rating; i++) {
+      bar.push(<div className="RatingNugget" />);
     }
     return bar;
-  }
+  };
   render() {
     return (
       <div className="RItem">
         <strong>
-            <p id='top' className='Title'>{this.props.title}</p>
-            <p id='top' className='Rating'>{this.props.rating}/10</p>
-        </strong><br/><br/>
-        <div className='RatingBar'>{this.createBar()}</div>
-        <p className='Description'>{this.props.description}</p>
+          <p id="top" className="Title">
+            {this.props.name}
+          </p>
+          <p id="top" className="Rating">
+            {this.props.rating}/10
+          </p>
+        </strong>
+        <br />
+        <br />
+        <div className="RatingBar">{this.createBar()}</div>
+        <p className="Description">{this.props.description}</p>
       </div>
     );
   }
